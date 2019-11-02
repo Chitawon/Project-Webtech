@@ -1,20 +1,39 @@
+@font-face{
+  font-family: "Superspace";
+  src: url("Font\Superspace Regular ver 1.00.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "Superspace";
+  src: url("Font\Superspace Bold ver 1.00.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*{
+  font-family: "Superspace";
+}
+
+
 /* ฝั่งซ้าย */
 
 .bd-sidebar /*div ใหญ่ฝั่งซ้าย*/{
-  background-color: #f5f2f9;
+  font-size: 1.1rem;
+  background-color:white;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-right: 1px solid rgba(0, 0, 0, .1);
 }
   
 .bd-links /*ตัวลิ้งข้อมูลใหญ่*/{
   padding-top: 1rem;
-  padding-bottom: 1rem;
   margin-right: -15px;
   margin-left: -15px;
 }
 
 .bd-toc-link /*ตัวลิ้งข้อมูลย่อย*/{
   display: block;
-  padding: .25rem 1.5rem;
+  padding: .50rem 1.5rem;
   font-weight: 600;
   color: rgba(0, 0, 0, .65);
 }
@@ -24,16 +43,14 @@
   text-decoration: none;
 }
 
-.bd-sidenav /*ข้อมูลย่อยใน div ไม่แสดงจนกว่าจะอยู่หน้านั้น โดยใช้ java เปลี่ยนเป็นแสดง*/{
-  display: none;
+#outline{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) /*ความกว้างจออย่างน้อย 768px*/ {
-
-  .bd-sidebar{
-    border-right: 1px solid rgba(0, 0, 0, .1);
-  }
-
   .bd-links{
     display: block !important;
   }
@@ -45,13 +62,11 @@
     }
     .bd-sidebar{
       position: sticky;
-      top: 4rem;
       z-index: 1000;
       height: calc(100vh - 4rem);
     }
     .bd-toc{
       position: sticky;
-      top: 4rem;
       height: calc(100vh - 4rem);
       overflow-y: auto;
     }
@@ -66,6 +81,50 @@
 
 /* ตรงกลาง */
 
-/*.bd-content{
+.bd-content{
+  background-color: #F2F3F4;
+}
 
-}*/
+
+/* ฝั่งขวา */
+
+.bd-toc /*div ใหญ่ฝั่งขวา*/{
+  background-color:white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-left: 1px solid rgba(0, 0, 0, .1);
+}
+
+.toc-entry a {
+  font-weight: 600;
+  display: block;
+  padding: .125rem 1.5rem;
+  color: #77757a;
+}
+
+.toc-entry a:hover{
+  color: #77757a63;
+  text-decoration: none;
+}
+
+/* Bar ด้านบน */
+
+.navbar-brand, .nav-link{
+  padding: 0 20px;
+}
+
+.navbar{
+  background-color: limegreen;
+}
+
+.navbar a{
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+ul, li{
+  list-style-type: none;
+}

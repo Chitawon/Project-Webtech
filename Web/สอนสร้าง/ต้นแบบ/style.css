@@ -1,0 +1,101 @@
+@font-face{
+  font-family: "Superspace";
+  src: url("Font\Superspace Regular ver 1.00.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: "Superspace";
+  src: url("Font\Superspace Bold ver 1.00.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*{
+  font-family: "Superspace";
+}
+
+
+/* ฝั่งซ้าย */
+
+.bd-sidebar /*div ใหญ่ฝั่งซ้าย*/{
+  font-size: 1.1rem;
+  background-color:white;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-right: 1px solid rgba(0, 0, 0, .1);
+}
+  
+.bd-links /*ตัวลิ้งข้อมูลใหญ่*/{
+  padding-top: 1rem;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.bd-toc-link /*ตัวลิ้งข้อมูลย่อย*/{
+  display: block;
+  padding: .50rem 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+}
+
+.bd-toc-link:hover /*ตัวลิ้งข้อมูลย่อยเมื่อ hover*/{
+  color: rgba(0, 0, 0, .85);
+  text-decoration: none;
+}
+
+#outline{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) /*ความกว้างจออย่างน้อย 768px*/ {
+  .bd-links{
+    display: block !important;
+  }
+
+  @supports (position: sticky) /*ถ้าสามารถใช้ position: sticky ได้*/ {
+    .bd-links{
+      max-height: calc(100vh - 9rem);
+      overflow-y: auto;
+    }
+    .bd-sidebar{
+      position: sticky;
+      z-index: 1000;
+      height: calc(100vh - 4rem);
+    }
+  }
+}
+
+@media (min-width: 1200px) /*ความกว้างจออย่างน้อย 1200px*/{
+  .bd-sidebar{
+    flex: 0 1 320px;
+  }
+}
+
+/* ตรงกลาง */
+
+.bd-content{
+  background-color: #F2F3F4;
+}
+
+/* Bar ด้านบน */
+
+.navbar-brand, .nav-link{
+  padding: 0 20px;
+}
+
+.navbar{
+  background-color: limegreen;
+}
+
+.navbar a{
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+ul, li{
+  list-style-type: none;
+}
