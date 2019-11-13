@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1573575896,
+	"version": 1573605653,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -21,6 +21,8 @@
 		"images/tiledbackground8.png",
 		"images/tiledbackground9.png",
 		"images/sprite5-sheet0.png",
+		"images/sprite6-sheet0.png",
+		"images/sprite7-sheet0.png",
 		"media/092.ogg",
 		"media/bgm_ohoshisama.ogg",
 		"media/death_sound2.ogg",
