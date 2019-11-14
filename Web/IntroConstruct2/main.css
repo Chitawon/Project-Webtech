@@ -1,9 +1,12 @@
+/*ทั้งหมด*/
+
 @font-face{
   font-family: "Superspace";
   src: url("Font\Superspace Regular ver 1.00.ttf");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face{
   font-family: "Superspace";
   src: url("Font\Superspace Bold ver 1.00.ttf");
@@ -19,6 +22,7 @@
 /* ฝั่งซ้าย */
 
 .bd-sidebar /*div ใหญ่ฝั่งซ้าย*/{
+  order: 0;
   font-size: 1.1rem;
   background-color:white;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -51,10 +55,6 @@
 }
 
 @media (min-width: 768px) /*ความกว้างจออย่างน้อย 768px*/ {
-  .bd-links{
-    display: block !important;
-  }
-
   @supports (position: sticky) /*ถ้าสามารถใช้ position: sticky ได้*/ {
     .bd-links{
       max-height: calc(100vh - 9rem);
@@ -62,27 +62,52 @@
     }
     .bd-sidebar{
       position: sticky;
+      top: 4rem;
       z-index: 1000;
       height: calc(100vh - 4rem);
     }
     .bd-toc{
       position: sticky;
+      top: 4rem;
       height: calc(100vh - 4rem);
       overflow-y: auto;
     }
   }
+
+}
+
+@media (min-width: 768px) /*ความกว้างจออย่างน้อย 768px*/ {
+  .bd-links{
+    display: block !important;
+  }
+  
 }
 
 /* ตรงกลาง */
 
 .bd-content{
+  order: 1;
   background-color: #F2F3F4;
 }
+p{
+  font-size: 1.3rem;
+}
+p#underimg{
+  text-align: center;
+}
 
+/*รูปภาพ*/
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ฝั่งขวา */
 
 .bd-toc /*div ใหญ่ฝั่งขวา*/{
+  order: 2;
   background-color:white;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -122,6 +147,5 @@
 ul, li{
   list-style-type: none;
 }
-p{
-  font-size: 1.3rem;
-}
+
+
