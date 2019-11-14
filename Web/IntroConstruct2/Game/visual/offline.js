@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1573611246,
+	"version": 1573698866,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -7,9 +7,6 @@
 		"offlineClient.js",
 		"images/sprite-sheet0.png",
 		"images/sprite2-sheet0.png",
-		"images/sprite3-sheet0.png",
-		"images/sprite3-sheet1.png",
-		"images/sprite3-sheet2.png",
 		"images/sprite4-sheet0.png",
 		"images/tiledbackground.png",
 		"images/tiledbackground2.png",
@@ -23,6 +20,11 @@
 		"images/sprite5-sheet0.png",
 		"images/sprite6-sheet0.png",
 		"images/sprite7-sheet0.png",
+		"images/sprite8-sheet0.png",
+		"images/sprite8-sheet1.png",
+		"images/sprite9-sheet0.png",
+		"images/sprite10-sheet0.png",
+		"images/sprite10-sheet1.png",
 		"media/092.ogg",
 		"media/bgm_ohoshisama.ogg",
 		"media/death_sound2.ogg",
