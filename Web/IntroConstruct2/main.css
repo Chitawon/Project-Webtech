@@ -2,14 +2,14 @@
 
 @font-face{
   font-family: "Superspace";
-  src: url("Font\Superspace Regular ver 1.00.ttf");
+  src: url("../Font/Superspace Regular ver 1.00.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face{
   font-family: "Superspace";
-  src: url("Font\Superspace Bold ver 1.00.ttf");
+  src: url("../Font/Superspace Bold ver 1.00.ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -94,6 +94,25 @@ p{
 }
 p#underimg{
   text-align: center;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){ 
+  div#double_img_text{
+    display: block;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px){ 
+  div#double_img_text{
+    display: block;
+  }
+}
+
+@media (min-width: 992px){ 
+  div#double_img_text{
+    display: flex;
+  }
 }
 
 /*รูปภาพ*/

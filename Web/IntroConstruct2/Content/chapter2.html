@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Object</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.mi
 n.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,6 +13,7 @@ n.css">
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../main.css">
+  <link rel="icon" href="C2_logo.png">
 </head>
 
 <body>
@@ -38,7 +39,7 @@ n.css">
         </form>
         <nav class="bd-links collapse" id="bd-docs-nav">
           <div class="bd-toc-item" id="outline">
-                <a class="bd-toc-link" href="#">OUTLINE</a>
+            <a class="bd-toc-link" href="#">OUTLINE</a>
           </div>
           <div class="dropdown-divider"></div>
           <div class="bd-toc-item">
@@ -66,36 +67,366 @@ n.css">
       </div>
 
       <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-        <h1>Object<a id="fornt"></a></h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>ฌฌฌฌฌ</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>Object</h1>
-        <h1>In</h1>
+        <h1>Chapter 2: Object<a id="Chapter2_Object"></a></h1>
+        <p>&emsp;Object คือ สิ่งที่เป็นตัวแทนของสิ่งต่าง ๆ ที่เราสร้างขึ้นมา เช่น ตัวละคร, ช่องเก็บข้อมูล
+          หรืออุปกรณ์สำหรับเล่นเกม (คีย์บอร์ด, จอย, เมาส์) ฯลฯ</p>
+
+        <p id="Insert_object"><b>Insert new object</b></p>
+        <p>&emsp;การสร้าง Object ในโปรแกรม Construct2 นั้นจะเรียกว่า การ Insert โดยมีวิธีการดังนี้</p>
+
+        <p>&emsp;&emsp;1. คลิกขวาที่ workspace เลือก Insert new object หรือ คลิกขวาที่ ไอคอนไฟล์ในแถบ project bar</p>
+
+        <div id="double_img_text">
+
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/021_Insert_1.PNG">
+            <p id="underimg">(รูป 021 Insert Object(1))</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/022_Insert_2.PNG">
+            <p id="underimg">(รูป 022 Insert Object(2))</p>
+          </div>
+        </div>
+
+        <p>&emsp;&emsp;2. จะมีหน้าต่างใหม่ขึ้นมาสามรถเลือกประเภทที่เราอยากให้ Object เป็นได้โดยการเลื่อน แถบด้านขวา</p>
+        <img class="center" src="../Image/02_Object/023_Insert_3.PNG">
+        <p id="underimg">(รูป 023 Insert Object(3))</p>
+
+        <p>&emsp;&emsp;3. คลิกซ้ายเพื่อเลือกประเภทที่เราอยากให้ Object เป็นอะไร</p>
+        <p>&emsp;&emsp;4. หลักจากนั้นตั้งชื่อให้ Object ในกรอบ สี่เหลี่ยมด้านล่าง และ กดปุ่ม Insert เพื่อสร้าง</p>
+        <p><b style="color: red;">คำเตือน</b> : การตั้งชื่อ Object นั้นควรตั้งให้สอดคล้องกับการใช้งาน หรือ
+          ว่าอธิบายว่าคืออะไร</p>
+
+        <p id="Object"><b>Object ของ Construct 2</b></p>
+        <p>&emsp;แยกออกเป็น 8 ประเภทดังนี้</p>
+        <p>1. Data & Storage คือ Object สำหรับเก็บข้อมูลในรูปแบบต่าง ๆ มีทั้งหมด 4 แบบ</p>
+        <p>&emsp;1. Array&emsp;เก็บข้อมูลในรูปแบบ แถว ได้ตั้งแต่แบบ 1 มิติ ถึง แบบ 3 มิติ ใช้สำหรับเก็บค่าตัวแปรต่าง ๆ
+        </p>
+        <p>&emsp;2. Dictionary&emsp;เก็บข้อมูลในรูปแบบ ดิกชันนารี่ </p>
+        <p>&emsp;3. Local storage&emsp;เก็บข้อมูลแล้วบันทึกข้อมูลลงในเครื่องของผู้ใช้
+          ใช้สำหรับเก็บข้อมูลที่ต้องการบันทึก
+          เช่น เซฟเกม, ค่าคะแนนสูงสุด เป็นต้น</p>
+        <p>&emsp;4. XML&emsp;เป็นการใช้ข้อมูลจาก ไฟล์เอกสารรูปแบบไฟล์ XML ใช้สำหรับ ดึงข้อมูลไฟล์ XML มาใช้</p>
+
+        <p>2. Form controls คือ Object สำหรับให้ผู้เล่นควบคุมสิ่งต่าง ๆ ส่วนใหญ่ใช้ในการตั้งค่าในตัวเกม (ความ`ยาก,
+          ความสวยงามในเกม) มีทั้งหมด 6 แบบ</p>
+        <p>&emsp;1. Button&emsp;เป็นปุ่มสำหรับกด หรือ เป็นช่องทำเครื่องหมาย</p>
+        <p>&emsp;2. File chooser&emsp;เป็นโปรแกรมเสริม ที่อนุญาติเลือกไฟล์ในเครื่องของผู้เล่นมาใส่ในเกมได้</p>
+        <p>&emsp;3. List&emsp;เป็นกล่องแบบ list แบบต่าง ๆ </p>
+        <p>&emsp;4. Progress bar&emsp;เป็น object บาร์แสดงผลการทำงานว่าดำเนินไปทำไรแล้ว</p>
+        <p>&emsp;5. Slider bar&emsp;เป็น object บาร์เลื่อนซ้ายขวา </p>
+        <p>&emsp;6. Textbox&emsp;เป็น object ที่สร้างช่องเปล่าให้ผู้เล่นได้กรอก</p>
+
+        <img class="center" src="../Image/02_Object/024_Obj_form.PNG">
+        <p id="underimg">(รูปที่ 024 Object > Form controls)</p>
+
+        <p>3. General คือ Object หลักที่ใช้ในเกม มีทั้งหมด 9 แบบ</p>
+        <p>&emsp;1. 9-patch&emsp;เป็นเปลี่ยนขนาดรูปโดยหารตัดบริเวณขอบและมุม ใช้สำหรับ Object ที่เปลี่ยนตาม</p>
+        <p>&emsp;2. Function&emsp;เป็นการเรียกใช้ action เดิมแต่ต่าง event ใช้เพื่อการเขียน action ซ้ำ ในต่าง event</p>
+
+        <img class="center" src="../Image/02_Object/025_Func_1.PNG">
+        <p id="underimg">(รูปที่ 025 ก่อนและหลังการใช้ Function)</p>
+
+        <p>&emsp;3. Shadow light&emsp;สามารถทำให้ object นั้นสร้าง เงาแบบ real-time</p>
+        <p>&emsp;4. Particles&emsp;สำหรับสร้าง เอฟเฟค แบบฝุ่น หรือ ควัน</p>
+        <p>&emsp;5. Sprite&emsp;oject ที่จะปรากฏในเกม เช่น ตัวละคร, สิ่งของ เป็นต้น</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/026_Particles.PNG">
+            <p id="underimg">(รูปที่ 026 Particles)</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/027_Sprite.PNG">
+            <p id="underimg">(รูปที่ 027 Sprite)</p>
+          </div>
+        </div>
+
+        <p>&emsp;6. Sprite Font&emsp;เป็น object รูปภาพที่แสดงออกเป็นตัวอักษร</p>
+        <p>&emsp;7. Text&emsp;เป็น object สำหรับแสดงตัวอักษรในเกม</p>
+        <p>&emsp;8. Tiled Background&emsp;เป็น object ที่แสดงออกเป็นรูปภาพ ซ้ำ ๆ เป็นรูปแบบ</p>
+        <p>&emsp;9. Tilemap&emsp;เป็นนำรูปที่เป็นแผ่นมาต่อกันจน เป็นแผนที่ในเกม</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/028_TilevsSprite.PNG">
+            <p id="underimg">(รูปที่ 028 Tile background VS Sprite) </p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/029_Tilemap.PNG">
+            <p id="underimg">(รูปที่ 029 Tilemap) </p>
+          </div>
+        </div>
+
+        <p>4. Input คือ การทำให้เกมสามารถรับคำสั่งต่าง ๆ และ ตั้งค่าว่าปุ่มใดทำให้เกิดอะไร ได้ มีทั้งหมด 4 แบบ</p>
+        <p>&emsp;1. Gamepad&emsp;สามารถทำให้รับคำสั่ง จาก จอย </p>
+        <p>&emsp;2. Keyboard&emsp;สามารถทำให้รับคำสั่ง จาก คีย์บอร์ด</p>
+        <p>&emsp;3. Mouse&emsp;สามารถทำให้รับคำสั่ง จาก เมาส์</p>
+        <p>&emsp;4. Touch&emsp;สามารถทำให้รับคำสั่ง จากการ สัมผัส ใช้กับมือถือ</p>
+
+        <p>5 .Media คือ สื่อต่าง ๆ ที่ทำให้แสดง หรือ รับการทำงานได้ มีทั้งหมด 4 แบบ</p>
+        <p>&emsp;1. Audio&emsp;ใช้เพื่อให้สามารถใส่และใช้เสียงในเกม</p>
+        <p>&emsp;2. Geolocation&emsp;ใช้เพื่อประมาณการที่อยู่ของ ผู้เล่น</p>
+        <p>&emsp;3. User Media&emsp;อนุญาตให้ รับข้อมูลจาก กล้อง webcam หรือ microphone ของผู้เล่นในเกมได้</p>
+        <p>&emsp;4. Video&emsp;ทำให้แสดง Video ในเกมได้</p>
+
+        <p>6. Monetisation คือสร้างรายได้ผ่านทางวิธีต่าง ๆ มีทั้งหมด 3 แบบ</p>
+        <p>&emsp;1. AdMob ads&emsp;ทำให้เกม โชว์โฆษณา จาก AdMob</p>
+        <p>&emsp;2. IAP หรือ In-App Purchases&emsp;ทำให้เกมสามารถขายของในเกมแก่ผู้เล่น โดยซื้อภายในเกม</p>
+        <p>&emsp;3. pubCenter&emsp;ทำให้เกมโชว์โฆษณา จาก Windows Store</p>
+
+        <p>7. Platform specific คือการทำให้ ขาย, เล่น, ใช้งานหรือเก็บข้อมูลบน Platform ต่าง ๆ ได้ มีทั้งหมด 10 แบบ</p>
+        <p>&emsp;1. Facebook&emsp;&emsp;&emsp;&emsp;&emsp; 6. Scirra Arcade</p>
+        <p>&emsp;2. Game Center บน IOS&emsp;7. Stride</p>
+        <p>&emsp;3. Google Play&emsp;&emsp;&emsp;&emsp;&ensp;8. Twitter</p>
+        <p>&emsp;4. Kongregate&emsp;&emsp;&emsp;&emsp;&ensp; 9. Windows Store</p>
+        <p>&emsp;5. NW.js&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;10. Xbox Live</p>
+
+        <p>8. Web คือการทำให้เกมติดต่อแบบ Web มีทั้งหมด 4 แบบ</p>
+        <p>&emsp;1. AJAX&emsp;ทำให้สามารถโชว์ระหว่างเกมได้</p>
+        <p>&emsp;2. Browser&emsp;สามารถใช้งานรูปแบบ web ในการรันเกม</p>
+        <p>&emsp;3. Multiplayer&emsp;สามารถทำ real-time online multiplayer ได้</p>
+        <p>&emsp;4. WebSocket&emsp;ใช้รูปแบบการส่งข้อมูล real-time แบบ WebSocket protocol</p>
+
+        <p id="Sprite"><b>Sprite</b></p>
+        <p>&emsp;Sprite คือ object ที่จะปรากฏและมีผลในเกม เช่น ตัวละคร, มอนสเตอร์, อาวุธเป็นต้น</p>
+        <p>การสร้าง Sprite</p>
+        <p>&emsp;1. คลิกขวาในพื้นที่บริเวณตรงกลางหน้าจอ แล้วเลือก Insert new object</p>
+        <p>&emsp;2. จะมีหน้าจอใหม่ขึ้นเลื่อนเมาส์ไปคลิกที่ Sprite หลังจากนั้นตั้งชื่อและ กดปุ่ม Insert เพื่อสร้าง /
+          ใส่รูป </p>
+        <p>&emsp;3. คลิกที่ workspace จะขึ้นหน้าต่างดังรูป (รูป 029) คลิกที่ไอคอนแฟ้ม และเลือกภาพให้ Sprite และกด enter
+        </p>
+        <p>&emsp;4. สามารถลาก Sprite จาก project bar มาเพิ่มใน workspace ได้ (รูป 030)</p>
+        <p><b style="color: red;">คำเตือน</b> : การตั้งชื่อ Sprite นั้นควรตั้งให้สอดคล้องกับการใช้งาน หรือ
+          ว่าอธิบายว่าคืออะไร</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/030_Edit_sprie.PNG">
+            <p id="underimg">(รูปที่ 030 หน้าต่างวาด, ใส่รูปให้ Sprite)</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/031_Spriteinpro.PNG">
+            <p id="underimg">(รูปที่ 031 การแสดง sprite ใน project bar)</p>
+          </div>
+        </div>
+
+        <p>การกำหนด Animation ของ sprite</p>
+        <p>&emsp;1. ดับเบิ้ลคลิก หรือ คลิกขวาที่ sprite และเลือก edit animation (รูป 031) จะขึ้นหน้าต่างดังนี้ (รูป 032)
+          โดยจะประกอบไปด้วย หน้าต่างตั้งค่ารูปภาพ (edit image) หน้าต่างอนิเมชัน(animation) และ หน้าต่าง อนิเมชันเฟรม
+          (animation frames)</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/032_Edit_ani.PNG">
+            <p id="underimg">(รูปที่ 032 การเปิดหน้าต่าง การจัดการอนิเมชัน)</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/033_Ani_windew.PNG">
+            <p id="underimg">(รูปที่ 033 หน้าต่าง การจัดการอนิเมชัน)</p>
+          </div>
+        </div>
+
+        <p>&emsp;2. คลิกขวาที่ หน้าต่าง animation frame > import frame > from file… > เลือกรูปภาพ > คลิก open (รูป 033)
+          ผลลัพธ์ (รูป 034)</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/034_import1.PNG">
+            <p id="underimg">(รูปที่ 034 import frame: step)</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img src="../Image/02_Object/035_import2.PNG">
+            <p id="underimg">(รูปที่ 035 import frame: result)</p>
+          </div>
+        </div>
+
+        <p>&emsp;3. ตั้งค่าจุด origin ของ sprite ให้เท่ากัน ตามลำดับ </p>
+
+        <img src="../Image/02_Object/036_set_up.PNG">
+        <p id="underimg">(รูปที่ 036 set up)</p>
+
+        <p>&emsp;4. เมื่อคลิก อนิเมชัน ใน หน้าต่าง อนิเมชัน มีแถบ Animation properties ขึ้น (รูป 021)</p>
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/037_Ani_prop.PNG">
+            <p id="underimg">(รูปที่ 037 Animation Properties) </p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;1. Speed&emsp;ความเร็วในการเล่นอนิเมชัน 1 รอบ</p>
+            <p>&emsp;2. Loop(No / Yes)&emsp;ให้อนิเมชันนั้นเล่นซ้ำ</p>
+            <p>&emsp;3. Repeat count&emsp;ตั้งค่าให้ อนิเมชัน วนซ้ำตามรอบที่กำหนด</p>
+            <p>&emsp;4. Repeat to&emsp;ตั้งค่าเฟรมเมื่อเล่นอนิเมชันจนจบ</p>
+            <p>&emsp;5. Ping-pong&emsp;เล่นอนิเมชัน ไปกลับ เช่น เฟรมที่ 1 2 3 2 1 เป็น</p>
+          </div>
+        </div>
+
+        <p>Sprite Properties</p>
+        <p>&emsp;การกำหนดคุณสมบัติให้กับ Sprite</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/038_sprite_prop.PNG">
+            <p id="underimg">(รูปที่ 038 Sprite Properties bar)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;Object type properties</p>
+            <p>&emsp;&emsp;1. Name&emsp;ชื่อของ Sprite</p>
+            <p>&emsp;&emsp;2. Plugin&emsp;บอกว่า Object เป็นประเภทอะไร แต่ในที่ คือ Sprite</p>
+            <p>&emsp;&emsp;3. UID&emsp;ตัวเลขเฉพาะของ Object</p>
+            <p>&emsp;&emsp;4. Global&emsp;ตั้งค่า Object ว่าจะถูกทำลายหลังออก Layout หรือไม่</p>
+
+            <p>&emsp;Common</p>
+            <p>&emsp;&emsp;1. Layer&emsp;บอกว่า Sprite อยู่ Layer ไหน</p>
+            <p>&emsp;&emsp;2. Angle&emsp;บอก Sprite นั้นหมุนกี่องศา</p>
+            <p>&emsp;&emsp;3. Opacity&emsp;บอกความทึบแสงของ Sprite</p>
+            <p>&emsp;&emsp;4. Position&emsp;บอกว่า Sprite อยู่ตรงไหนตาม แกน x และ แกน y</p>
+            <p>&emsp;&emsp;5. Size&emsp;บอกว่า Sprite นั้นขนาดเท่าไร มีหน่วยเป็น pixels</p>
+          </div>
+        </div>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img style="width: 400px;" src="../Image/02_Object/039_Sprite_var.PNG">
+            <p id="underimg">(รูปที่ 039 หน้าต่าง Instance variables)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;Instance variables คือ ตัวแปรของ Object / Sprite</p>
+            <p>&emsp;โดยมีอยู่ Instance variables อยู่ 3 ประเภทคือ</p>
+            <p>&emsp;&emsp;1. Number&emsp;มีค่าเป็นตัวเลข</p>
+            <p>&emsp;&emsp;2. Boolean&emsp;เป็นค่าระหว่าง False(เท็จ) กับ True(จริง)</p>
+            <p>&emsp;&emsp;3. Text&emsp;มีค่าเป็นตัวหนังสือ</p>
+          </div>
+        </div>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img style="width: 400px;" src="../Image/02_Object/040_Instance_var.PNG">
+            <p id="underimg">(รูปที่ 040 การสร้าง Instance variables)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;โดยวิธีการสร้าง Instance variable ดั้งนี้</p>
+            <p>&emsp;&emsp;1. คลิกไปที่ Sprite ที่ต้องการคลิกไปที่ Instance variables ที่อยู่ทางด้านซ้ายของจอ </p>
+            <p>&emsp;&emsp;2. หลังจากนั้นจะมีหน้าจอใหม่ขึ้นมา ให้คลิกไปที่ สัญลักษณ์ + เพื่อเป็นการเพิ่ม Instance
+              variables</p>
+            <p>&emsp;&emsp;3. หลังจากนั้นจะมีหน้าจอใหม่ขึ้นมา ให้เราตั้ง ชื่อ เลือกประเภท Instance </p>
+            <p>&emsp;&emsp;4. หลังจากกดปุ่ม OK ถือว่าเป็นอันเสร็จ </p>
+          </div>
+        </div>
+
+        <p id="Text"><b>Text</b></p>
+        <p>&emsp;Text คือ object สำหรับแสดงตัวอักษรในเกม</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/041_Text_prop.PNG">
+            <p id="underimg">(รูปที่ 041 ตัวอย่าง Text)</p>
+            <img style="width: 400px;" src="../Image/02_Object/042_Ex_text.PNG">
+            <p id="underimg">(รูปที่ 042 ตัวอย่าง Text)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;Text Properties</p>
+            <p>&emsp;&emsp;1. Text&emsp;ตัวอักษรที่จะโชว์บนจอ</p>
+            <p>&emsp;&emsp;2. Initial visibility&emsp;ตั้งค่าว่าให้มาเห็นในเกมหรือไม่</p>
+            <p>&emsp;&emsp;3. Font&emsp;รูปแบบ Font ที่ใช้</p>
+            <p>&emsp;&emsp;4. Color&emsp;สีของตัวอักษร</p>
+            <p>&emsp;&emsp;5. Horizontal alignment&emsp;ตำแหน่งตัวอักษรในแนวนอน </p>
+            <p>&emsp;&emsp;6. Vertical alignment&emsp;ตำแหน่งตัวอักษรในแนวตั้ง </p>
+            <p>&emsp;&emsp;7. Hotspot&emsp;เลือกจุดหมุนให้ Objects</p>
+            <p>&emsp;&emsp;8. Wrapping&emsp;ล้อมข้อความ ด้วยคำหรือ ตัวอักษร</p>
+            <p>&emsp;&emsp;9. Line height&emsp;ค่าความห่างแต่ละบรรทัด</p>
+          </div>
+        </div>
+
+        <p id="Tile_background"><b>Tile background</b></p>
+        <p>&emsp;Tile background คือ object ที่แสดงออกเป็นรูปภาพ ซ้ำ ๆ เป็นรูปแบบ Tile background</p>
+
+        <img src="../Image/02_Object/043_Ex_tileback.PNG">
+        <p id="underimg">(รูปที่ 043 ตัวอย่าง Tile background)</p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 10px;">
+            <p id="Tile_map">&emsp;Tile map</p>
+            <p>&emsp;&emsp;Tile map คือ เป็นนำรูปที่เป็นแผ่นมาต่อกันจน เป็นแผนที่ในเกม
+              จะมีหน้าต่างใหม่ขึ้นมาหลังจากทำการ Insert tilemap เพื่อให้เราดึงภาพที่ต้องการมาเพื่อวาด tilemap</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img style="width: 500px;" src="../Image/02_Object/044_Ex_tilemap.PNG">
+            <p id="underimg">(รูปที่ 044 ตัวอย่าง Tilemap)</p>
+          </div>
+        </div>
+
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/045_Tilemap_prop.PNG">
+            <p id="underimg">(รูปที่ 045 Tilemap Properties)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;Tilemap Properties</p>
+            <p>&emsp;&emsp;1. Image&emsp;รูปภาพสำหรับใช้ใน Tilemap</p>
+            <p>&emsp;&emsp;2. Initial visibility&emsp;ตั้งค่าว่าให้มาเห็นในเกมหรือไม่</p>
+            <p>&emsp;&emsp;3. Tile width&emsp;ความกว้างของ Tile</p>
+            <p>&emsp;&emsp;4. Tile height&emsp;ความสูงของ Tile</p>
+            <p>&emsp;&emsp;5. Tile x offset&emsp;รอยห่างแนวนอน ของ Tile</p>
+            <p>&emsp;&emsp;6. Tile y offset&emsp;รอยห่างแนวตั้ง ของ Tile</p>
+            <p>&emsp;&emsp;7. Tile x spacing&emsp;ระยะห่างแนวนอน ระหว่าง Tile</p>
+            <p>&emsp;&emsp;8. Tile y spacing&emsp;ระยะห่างแนวตั้ง ระหว่าง Tile</p>
+            <p>&emsp;&emsp;9. Seamless mode&emsp;ทำให้ภาพไรรอยต่อ</p>
+          </div>
+        </div>
+
+        <p id="Input"><b>Input</b></p>
+        <div id="double_img_text">
+          <div style="margin-right: 5px;">
+            <img src="../Image/02_Object/046_input.PNG">
+            <p id="underimg">(รูปที่ 046 input)</p>
+          </div>
+
+          <div style="margin-left: 10px;">
+            <p>&emsp;Input คือ การทำให้เกมสามารถรับคำสั่งผ่านตัวรับต่าง ๆ โดยจะมีให้เลือก 4 ชนิด</p>
+            <p>&emsp;&emsp;1. จอยคอนโทรลเลอร์&emsp;3. เมาส์</p>
+            <p>&emsp;&emsp;2. คีย์บอร์ด&emsp;&emsp;&emsp;&emsp; 4. สัมผัส (มือถือ)</p>
+          </div>
+        </div>
+
+        <p id="Audio"><b>Audio</b></p>
+        <p>&emsp;Insert เพื่อให้ โปรแกรมสามารถ อ่านไฟล์เสียงที่นำเข้ามาได้ </p>
+
+        <div id="double_img_text">
+          <div style="margin-right: 10px;">
+
+            <p>&emsp;Properties</p>
+            <p>&emsp;&emsp;1. Timescale audio&emsp;เปลี่ยนเวลาในเล่น audio</p>
+            <p>&emsp;&emsp;2. Save/load&emsp;เล่นย้อนหลังเมื่อมีการโหลด และ เซฟ</p>
+            <p>&emsp;&emsp;3. Play in background&emsp;เล่นเพลงหลัง background</p>
+
+            <p>&emsp;Positioned Audio</p>
+            <p>&emsp;&emsp;1. Panning model&emsp;รูปแบบประมวลผลเสียง</p>
+            <p>&emsp;&emsp;2. Distance model&emsp;รูปแบบเสียงที่ลดลงจากระยะห่าง</p>
+            <p>&emsp;&emsp;3. Listener Z height&emsp;ระดับเสียงความดังตามลำดับ layout</p>
+            <p>&emsp;&emsp;4. Reference distance&emsp;เสียงโดยวัดจากระยะเป็น pixels</p>
+            <p>&emsp;&emsp;5. Maximum distance&emsp;ระยะเสียงที่จะไม่ลดลง</p>
+            <p>&emsp;&emsp;6. Roll-off factor&emsp;เสียงที่ลดลงเร็วๆ แค่เมื่อห่างจากแหล่ง</p>
+          </div>
+
+          <div style="margin-left: 5px;">
+            <img style="width: 400px;" src="../Image/02_Object/047_Audio_prop.PNG">
+            <p id="underimg">(รูปที่ 047 audio properties)</p>
+          </div>
+        </div>
       </main>
 
       <div class="d-none d-xl-block col-xl-2 bd-toc">
